@@ -55,6 +55,11 @@ var pxsim;
             pxsim.board().setASCIIGroup(asciiGroup);
         }
         image.setASCIIGroup = setASCIIGroup;
+        //% blockId="getASCIIGroup" block="the ASCII group"
+        function getASCIIGroup() {
+            return pxsim.board().getASCIIGroup();
+        }
+        image.getASCIIGroup = getASCIIGroup;
         //% blockId="pixelsToASCII" block="an ASCII character for each pixel in %list"
         function pixelsToASCII(list) {
             return pxsim.board().pixelsToASCII(list);
@@ -91,6 +96,16 @@ var pxsim;
             pxsim.board().hidePixelInspector();
         }
         display.hidePixelInspector = hidePixelInspector;
+        //% block="display ASCII group list" blockId=displayGroupList
+        function displayGroupList() {
+            pxsim.board().displayGroupList();
+        }
+        display.displayGroupList = displayGroupList;
+        //% block="hide ASCII group list" blockId=hideGroupList
+        function hideGroupList() {
+            pxsim.board().hideGroupList();
+        }
+        display.hideGroupList = hideGroupList;
     })(display = pxsim.display || (pxsim.display = {}));
 })(pxsim || (pxsim = {}));
 (function (pxsim) {
@@ -165,12 +180,15 @@ var pxsim;
             _this.canvasElement = document.getElementById('canvas');
             _this.imageInspectorElement = document.getElementById('image-inspector');
             _this.textElement = document.getElementById('text');
+            _this.groupListElement = document.getElementById('group-list');
             _this.elements = [
                 _this.canvasElement,
                 _this.imageInspectorElement,
                 _this.textElement,
+                _this.groupListElement,
             ];
             _this.hidePixelInspector();
+            _this.hideGroupList();
             _this.initListeners();
             return _this;
         }
@@ -185,6 +203,8 @@ var pxsim;
         Board.prototype.initAsync = function (msg) {
             var board = this;
             board.canvasElement.innerHTML = ''; // clear canvas
+            board.imageInspectorElement.innerHTML = ''; // clear canvas
+            board.textElement.innerHTML = ''; // clear canvas
             document.body.innerHTML = ''; // clear children
             board.elements.forEach(function (element) {
                 document.body.appendChild(element);
@@ -332,6 +352,10 @@ var pxsim;
                     break;
             }
         };
+        Board.prototype.getASCIIGroup = function () {
+            var board = this;
+            return board.asciiGroup;
+        };
         Board.prototype.pixelsToASCII = function (pixels) {
             var board = this;
             var chars = _.map(board.chunkedPixels, function (pixel) {
@@ -385,6 +409,14 @@ var pxsim;
             var board = this;
             board.showPixelInspector = false;
             board.imageInspectorElement.className = 'hidden';
+        };
+        Board.prototype.displayGroupList = function () {
+            var board = this;
+            board.groupListElement.className = '';
+        };
+        Board.prototype.hideGroupList = function () {
+            var board = this;
+            board.groupListElement.className = 'hidden';
         };
         Board.prototype.updateView = function () {
             console.log("Update view");

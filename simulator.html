@@ -1,16 +1,24 @@
 <!doctype html>
-<html lang="en" manifest="/makecode-ascii-art/release.manifest" data-framework="typescript">
+<html lang="en" manifest="/pxt-sample/release.manifest" data-framework="typescript">
 
 <head>
     <meta charset="utf-8">
-    <title>sample simulator</title>
-    <link rel="stylesheet" type="text/css" href="/makecode-ascii-art/sim.css">
+    <title>Make your own ASCII Art</title>
+    <link rel="stylesheet" type="text/css" href="/pxt-sample/sim.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 
     <style>
         body {
             background: transparent;
             overflow: hidden;
+        }
+        #canvas,
+        #image-inspector {
+            display: inline-block;
+            float: left;
+        }
+        #text {
+            clear: both;
         }
         #pixel-preview--color-box {
             min-width: 40px;
@@ -26,6 +34,9 @@
             margin-top: 4px;
             margin-bottom: 4px;
         }
+        #group-list {
+            overflow: auto;
+        }
         #text {
             overflow: auto;
             max-height: 200px;
@@ -33,6 +44,9 @@
         }
         .hidden {
             visibility: none;
+        }
+        #group-list.hidden {
+            display: none;
         }
         .rgba-label--fixed-width > span {
             min-width: 30px;
@@ -77,11 +91,11 @@
             content: ')';
         }
     </style>
-    <script src="/makecode-ascii-art/p5/0.6.1/p5.min.js"></script>
-    <script src="/makecode-ascii-art/lodash/4.17.10/lodash.min.js"></script>
-    <script src="/makecode-ascii-art/bluebird.min.js"></script>
-    <script src="/makecode-ascii-art/pxtsim.js"></script>
-    <script src="/makecode-ascii-art/sim.js"></script>
+    <script src="/pxt-sample/p5/0.6.1/p5.min.js"></script>
+    <script src="/pxt-sample/lodash/4.17.10/lodash.min.js"></script>
+    <script src="/pxt-sample/bluebird.min.js"></script>
+    <script src="/pxt-sample/pxtsim.js"></script>
+    <script src="/pxt-sample/sim.js"></script>
 </head>
 
 <body>
@@ -91,4 +105,11 @@
         <div id='pixel-preview--text'></div>
     </div>
     <div id='text'></div>
+    <div id='group-list'>
+        <pre>ascii-one [ '..', '%%', '@@', '??', 'SS', '++', '..', '**', '::', ',,', '..']</pre>
+        <pre>ascii-two [ '##', '??', '%%', '..', 'SS', '++', '..', '**', '::', '..', '  ']</pre>
+        <pre>ascii-three [ '##', '??', '%%', '..', 'SS', '++', '..', '**', '::', ',,', '..']</pre>
+        <pre>ascii-four ["$$","@@","BB","%%","88","&&","WW","MM","##","**","oo","aa","hh","kk","bb","dd","pp","qq","ww","mm""ZZ","OO","00","QQ","LL","CC","JJ","UU","YY","XX","zz","cc","vv","uu","nn","xx","rr","jj","ff","tt","//","\\","||","((","))","11","{{","}}","[[","]]","??","--","__","++","~~","<<",">>","ii","!!","ll","II",";;","::",",,",'""',"^^","``","''","..","  "]</pre>
+        <pre>ascii-five [ '##', 'vv', 'tt', "{{", '??', '++', '::', '~~', '**', '..', '  ']</pre>
+    </div>
 </body>
