@@ -47,7 +47,7 @@ declare namespace display {
     /**
      * Display message
      */
-    //% block="display the message %text" blockId=displayText
+    //% block="display the text %text" blockId=displayText
     //% shim=display::displayText
     function displayText(text: string): void;
 

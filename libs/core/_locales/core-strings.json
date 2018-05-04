@@ -40,7 +40,7 @@
   "display.displayGroupList|block": "display ASCII group list",
   "display.displayPixelInspector|block": "display pixel inspector",
   "display.displayPixels|block": "display pixels %list",
-  "display.displayText|block": "display the message %text",
+  "display.displayText|block": "display the text %text",
   "display.hideGroupList|block": "hide ASCII group list",
   "display.hidePixelInspector|block": "hide pixel inspector",
   "display|block": "display",

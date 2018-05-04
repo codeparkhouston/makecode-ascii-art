@@ -55,7 +55,7 @@ namespace pxsim.display {
     /**
      * Display message
      */
-    //% block="display the message %text" blockId=displayText
+    //% block="display the text %text" blockId=displayText
     export function displayText(text:string) {
         board().displayText(text);
     }
