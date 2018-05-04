@@ -1,10 +1,10 @@
 CACHE MANIFEST
 
 CACHE:
-/pxt-sample/bluebird.min.js
-/pxt-sample/pxtsim.js
-/pxt-sample/sim.js
-/pxt-sample/sim.css
+/makecode-ascii-art/bluebird.min.js
+/makecode-ascii-art/pxtsim.js
+/makecode-ascii-art/sim.js
+/makecode-ascii-art/sim.css
 
 NETWORK:
 *
