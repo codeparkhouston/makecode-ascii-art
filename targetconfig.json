@@ -6,7 +6,6 @@
         ]
     },
     "galleries": {
-        "Examples": "examples",
-        "Tutorials": "tutorials"
+        "Examples": "examples"
     }
 }

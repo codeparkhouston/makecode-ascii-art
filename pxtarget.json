@@ -1,7 +1,7 @@
 {
-    "id": "sample",
-    "name": "sample",
-    "title": "MakeCode Editor Sample",
+    "id": "ASCII Art",
+    "name": "ASCII Art",
+    "title": "MakeCode ASCII Art",
     "corepkg": "core",
     "cloud": {
         "workspace": false,
@@ -15,9 +15,9 @@
       "loopsBlocks": true,
       "logicBlocks": true,
       "variablesBlocks": true,
-      "textBlocks": false,
+      "textBlocks": true,
       "functionBlocks": false,
-      "listsBlocks": false 
+      "listsBlocks": true
     },
     "simulator": {
         "autoRun": true
@@ -40,7 +40,7 @@
         ],
         "coloredToolbox": false,
         "monacoToolbox": true,
-        "invertedMenu": true,
+        "invertedMenu": false,
         "showHomeScreen": true,
         "homeScreenHero": "./static/hero.png",        
         "blocklyOptions": { 

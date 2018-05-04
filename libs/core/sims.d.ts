@@ -1,47 +1,66 @@
 // Auto-generated from simulator. Do not edit.
-declare namespace hare {
+declare namespace file {
     /**
-     * This is hop
-     */
-    //% blockId="sampleHop" block="hop %hop on color %color=colorNumberPicker"
-    //% hop.fieldEditor="gridpicker"
-    //% shim=hare::hop
-    function hop(hop: Hop, color: number): void;
-
-    //% blockId=sampleOnLand block="on land"
-    //% optionalVariableArgs
-    //% shim=hare::onLand
-    function onLand(handler: (height: number, more: number, most: number) => void): void;
-
-}
-declare namespace turtle {
-    /**
-     * Moves the sprite forward
-     * @param steps number of steps to move, eg: 1
+     * Load file
+     * @param path path to load image from! eg: "../cdn/pikachu.jpeg"
      */
     //% weight=90
-    //% blockId=sampleForward block="forward %steps"
-    //% shim=turtle::forwardAsync promise
-    function forward(steps: number): void;
+    //% blockId="loadImage" block="load image from %path"
+    //% shim=file::loadImage
+    function loadImage(path: string): void;
+
+}
+declare namespace image {
+    /**
+     * Load file
+     * @param width width to resize image to! eg: 100
+     */
+    //% weight=90
+    //% blockId="resizeImage" block="resize the image to a width of %width"
+    //% shim=image::resizeImage
+    function resizeImage(width: number): void;
+
+    //% weight=90
+    //% blockId="getPixels" block="pixel values of the image"
+    //% shim=image::getPixels
+    function getPixels(): number[][];
+
+    //% weight=90
+    //% blockId="filterImage" block="for each pixel, do the math to %filterType the color values"
+    //% shim=image::filterImage
+    function filterImage(filterType: Filters): void;
+
+    //% blockId="setASCIIGroup" block="pick the group %groupName"
+    //% shim=image::setASCIIGroup
+    function setASCIIGroup(asciiGroup: ASCIIGroups): void;
+
+    //% blockId="pixelsToASCII" block="an ASCII character for each pixel in %list"
+    //% shim=image::pixelsToASCII
+    function pixelsToASCII(list: number[][]): string;
+
+}
+declare namespace display {
+    /**
+     * Display message
+     */
+    //% block="display the message %text" blockId=displayText
+    //% shim=display::displayText
+    function displayText(text: string): void;
 
     /**
-     * Moves the sprite forward
-     * @param direction the direction to turn, eg: Direction.Left
-     * @param angle degrees to turn, eg:90
+     * Display pixels
      */
-    //% weight=85
-    //% blockId=sampleTurn block="turn %direction|by %angle degrees"
-    //% angle.min=-180 angle.max=180
-    //% shim=turtle::turnAsync promise
-    function turn(direction: Direction, angle: number): void;
+    //% block="display pixels %list" blockId=displayPixels
+    //% shim=display::displayPixels
+    function displayPixels(list: number[][]): void;
 
-    /**
-     * Triggers when the turtle bumps a wall
-     * @param handler 
-     */
-    //% blockId=onBump block="on bump"
-    //% shim=turtle::onBump
-    function onBump(handler: () => void): void;
+    //% block="display pixel inspector" blockId=displayPixelInspector
+    //% shim=display::displayPixelInspector
+    function displayPixelInspector(): void;
+
+    //% block="hide pixel inspector" blockId=hidePixelInspector
+    //% shim=display::hidePixelInspector
+    function hidePixelInspector(): void;
 
 }
 declare namespace loops {
@@ -62,51 +81,6 @@ declare namespace loops {
     //% block="pause (ms) %pause" blockId=device_pause
     //% shim=loops::pauseAsync promise
     function pause(ms: number): void;
-
-}
-declare namespace console {
-    /**
-     * Print out message
-     */
-    //%
-    //% shim=console::log
-    function log(msg: string): void;
-
-}
-    /**
-     * A ghost on the screen.
-     */
-    //%
-    declare class Sprite {
-        /**
-         * The X-coordiante
-         */
-        //%
-        //% shim=.x
-        public x: number;
-
-        /**
-         * The Y-coordiante
-         */
-        //%
-        //% shim=.y
-        public y: number;
-
-        /**
-         * Move the thing forward
-         */
-        //%
-        //% shim=.forwardAsync promise
-        public forward(steps: number): void;
-
-    }
-declare namespace sprites {
-    /**
-     * Creates a new sprite
-     */
-    //% blockId="sampleCreate" block="createSprite"
-    //% shim=sprites::createSprite
-    function createSprite(): Sprite;
 
 }
 

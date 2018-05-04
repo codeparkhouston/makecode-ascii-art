@@ -1,61 +1,77 @@
 /// <reference path="../libs/core/enums.d.ts"/>
 
-namespace pxsim.hare {
+namespace pxsim.file {
     /**
-     * This is hop
+     * Load file
+     * @param path path to load image from! eg: "../cdn/pikachu.jpeg"
      */
-    //% blockId="sampleHop" block="hop %hop on color %color=colorNumberPicker"
-    //% hop.fieldEditor="gridpicker"
-    export function hop(hop: Hop, color: number) {
-
-    }
-
-    //% blockId=sampleOnLand block="on land"
-    //% optionalVariableArgs
-    export function onLand(handler: (height: number, more: number, most: number) => void) {
-
+    //% weight=90
+    //% blockId="loadImage" block="load image from %path"
+    export function loadImage(path: string) {
+        board().loadImage(path);
     }
 }
 
-namespace pxsim.turtle {
+namespace pxsim.image {
     /**
-     * Moves the sprite forward
-     * @param steps number of steps to move, eg: 1
+     * Load file
+     * @param width width to resize image to! eg: 100
      */
     //% weight=90
-    //% blockId=sampleForward block="forward %steps"
-    export function forwardAsync(steps: number) {
-        return board().sprite.forwardAsync(steps)
+    //% blockId="resizeImage" block="resize the image to a width of %width"
+    export function resizeImage(width: number) {
+        board().resizeImage(width);
     }
 
+    //% weight=90
+    //% blockId="getPixels" block="pixel values of the image"
+    export function getPixels() {
+        return board().getPixels();
+    }
+
+    //% weight=90
+    //% blockId="filterImage" block="for each pixel, do the math to %filterType the color values"
+    export function filterImage(filterType: Filters) {
+        return board().filterImage(filterType);
+    }
+
+    //% blockId="setASCIIGroup" block="pick the group %groupName"
+    export function setASCIIGroup(asciiGroup: ASCIIGroups) {
+        board().setASCIIGroup(asciiGroup);
+    }
+
+    //% blockId="pixelsToASCII" block="an ASCII character for each pixel in %list"
+    export function pixelsToASCII(list:number[][]) {
+        return board().pixelsToASCII(list);
+    }
+}
+
+namespace pxsim.display {
     /**
-     * Moves the sprite forward
-     * @param direction the direction to turn, eg: Direction.Left
-     * @param angle degrees to turn, eg:90
+     * Display message
      */
-    //% weight=85
-    //% blockId=sampleTurn block="turn %direction|by %angle degrees"
-    //% angle.min=-180 angle.max=180
-    export function turnAsync(direction: Direction, angle: number) {
-        let b = board();
-
-        if (direction == Direction.Left)
-            b.sprite.angle -= angle;
-        else
-            b.sprite.angle += angle;
-        return Promise.delay(400)
+    //% block="display the message %text" blockId=displayText
+    export function displayText(text:string) {
+        board().displayText(text);
     }
-
     /**
-     * Triggers when the turtle bumps a wall
-     * @param handler 
+     * Display pixels
      */
-    //% blockId=onBump block="on bump"
-    export function onBump(handler: RefAction) {
-        let b = board();
-
-        b.bus.listen("Turtle", "Bump", handler);
+    //% block="display pixels %list" blockId=displayPixels
+    export function displayPixels(list:number[][]) {
+        board().displayPixels(list);
     }
+
+    //% block="display pixel inspector" blockId=displayPixelInspector
+    export function displayPixelInspector() {
+        board().displayPixelInspector();
+    }
+
+    //% block="hide pixel inspector" blockId=hidePixelInspector
+    export function hidePixelInspector() {
+        board().hidePixelInspector();
+    }
+
 }
 
 namespace pxsim.loops {
@@ -83,65 +99,20 @@ namespace pxsim.loops {
 
 function logMsg(m:string) { console.log(m) }
 
-namespace pxsim.console {
-    /**
-     * Print out message
-     */
-    //% 
-    export function log(msg:string) {
-        logMsg("CONSOLE: " + msg)
-        // why doesn't that work?
-        board().writeSerial(msg + "\n")
-    }
-}
-
-namespace pxsim {
-    /**
-     * A ghost on the screen.
-     */
-    //%
-    export class Sprite {
-        /**
-         * The X-coordiante
-         */
-        //%
-        public x = 100;
-         /**
-         * The Y-coordiante
-         */
-        //%
-        public y = 100;
-        public angle = 90;
-        
-        constructor() {
-        }
-        
-        private foobar() {}
-
-        /**
-         * Move the thing forward
-         */
-        //%
-        public forwardAsync(steps: number) {
-            let deg = this.angle / 180 * Math.PI;
-            this.x += Math.cos(deg) * steps * 10;
-            this.y += Math.sin(deg) * steps * 10;
-            board().updateView();
-
-            if (this.x < 0 || this.y < 0)
-                board().bus.queue("TURTLE", "BUMP");
-
-            return Promise.delay(400)
-        }
-    }
-}
-
-namespace pxsim.sprites {
-    /**
-     * Creates a new sprite
-     */
-    //% blockId="sampleCreate" block="createSprite"
-    export function createSprite(): Sprite {
-        return new Sprite();
-    }
-}
+// namespace pxsim.console {
+//     /**
+//      * Print out message
+//      */
+//     //% block="log the message %msg" blockId=log_message
+//     export function log(msg:string) {
+//         logMsg("CONSOLE: " + msg)
+//         // why doesn't that work?
+//         board().writeSerial(msg + "\n")
+//     }
+//     //% block="log the number %msg" blockId=log_number
+//     export function logNumber(msg:number[]) {
+//         logMsg("CONSOLE: " + msg.toString())
+//         // why doesn't that work?
+//         board().writeSerial(msg.toString() + "\n")
+//     }
+// }

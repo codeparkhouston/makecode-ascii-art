@@ -2,12 +2,17 @@
  * Basic functionalities.
  */
 //% color=#00BCD4 weight=100
-namespace turtle {
+namespace file {
 
 }
 
-//% color=#D4BC00 weight=95
-namespace hare {
+//% color=#D4BC00 weight=99
+namespace image {
+
+}
+
+//% color=#ff87c3 weight=97
+namespace display {
 
 }
 

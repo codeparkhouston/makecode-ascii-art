@@ -6,14 +6,9 @@ Here are some fun programs for your @boardname@!
 
 ```codecard
 [{
-  "name": "Square",
-  "description": "Move in a square",
-  "url":"/examples/square",
-  "cardType": "example"
-}, {
-  "name": "Square 2",
-  "description": "TBD",
-  "url": "/examples/square2",
+  "name": "ASCII Art",
+  "description": "Make ASCII Art",
+  "url":"/examples/ascii-art",
   "cardType": "example"
 }]
 ```

@@ -25,17 +25,18 @@
     "docs/**"
   ],
   "devDependencies": {
-    "typescript": "2.6.1",
-    "rtlcss": "^2.1.2",
-    "autoprefixer": "^6.7.6",
-    "less": "2.7.3",
-    "semantic-ui-less": "2.2.14",
     "@types/bluebird": "2.0.33",
     "@types/jquery": "3.2.16",
     "@types/marked": "0.3.0",
-    "@types/node": "8.0.53"
+    "@types/node": "8.0.53",
+    "autoprefixer": "^6.7.6",
+    "less": "2.7.3",
+    "rtlcss": "^2.1.2",
+    "semantic-ui-less": "2.2.14",
+    "typescript": "2.6.1"
   },
   "dependencies": {
+    "@types/event-emitter": "^0.3.2",
     "pxt-core": "3.*"
   }
 }

@@ -5,20 +5,90 @@
     <meta charset="utf-8">
     <title>sample simulator</title>
     <link rel="stylesheet" type="text/css" href="/sim/sim.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+
     <style>
         body {
             background: transparent;
             overflow: hidden;
         }
+        #pixel-preview--color-box {
+            min-width: 40px;
+            min-height: 40px;
+            display: inline-block;
+        }
+        #pixel-preview--text {
+            display: inline-block;
+        }
+        #text,
+        #image-inspector {
+            font-family: 'Source Code Pro', monospace;
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+        #text {
+            overflow: auto;
+            max-height: 200px;
+            font-size: 12px;
+        }
+        .hidden {
+            visibility: none;
+        }
+        .rgba-label--fixed-width > span {
+            min-width: 30px;
+            display: inline-block;
+            text-align: right;
+        }
+        .rgba-label > span:nth-child(1) {
+            color: red;
+        }
+        .rgba-label > span:nth-child(2) {
+            color: green;
+        }
+        .rgba-label > span:nth-child(3) {
+            color: blue;
+        }
+        .pixel {
+            cursor: pointer;
+            margin: 4px;
+            border-radius: 1px;
+            background: rgba(255, 255, 255, 0.5);
+            border-bottom-style: solid;
+            display: inline-block;
+            overflow: hidden;
+            transition: 200ms linear max-width;
+            line-height: 20px;
+
+            padding: 0;
+            max-height: 0px;
+            max-width: 28px;
+            border-bottom-width: 28px;
+        }
+        .pixel:hover {
+            padding: 2px;
+            max-height: none;
+            max-width: none;
+            border-bottom-width: 4px;
+        }
+        .pixel::before {
+            content: '(';
+        }
+        .pixel::after {
+            content: ')';
+        }
     </style>
+    <script src="/cdn/p5/0.6.1/p5.min.js"></script>
+    <script src="/cdn/lodash/4.17.10/lodash.min.js"></script>
     <script src="/cdn/bluebird.min.js"></script>
     <script src="/cdn/pxtsim.js"></script>
     <script src="/sim/sim.js"></script>
 </head>
 
 <body>
-    <svg id='svgcanvas' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 280">
-        <circle id='svgsprite' cx="100" cy="100" r="50" class="sprite" />
-        <circle id='svgsprite2' cx="50" cy="50" r="25" class="sprite" />
-    </svg>
+    <div id='canvas'></div>
+    <div id='image-inspector'>
+        <div id='pixel-preview--color-box'></div>
+        <div id='pixel-preview--text'></div>
+    </div>
+    <div id='text'></div>
 </body>
