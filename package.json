@@ -9,11 +9,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Microsoft/pxt-sample.git"
+    "url": "git+https://github.com/codeparkhouston/makecode-ascii-art.git"
   },
   "author": "",
   "license": "MIT",
-  "homepage": "https://github.com/Microsoft/pxt-sample#readme",
+  "homepage": "https://github.com/codeparkhouston/makecode-ascii-art#readme",
   "files": [
     "README.md",
     "pxtarget.json",
