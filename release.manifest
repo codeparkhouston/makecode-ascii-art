@@ -1,66 +1,66 @@
 CACHE MANIFEST
 
 CACHE:
-/pxt-sample/semantic.js
-/pxt-sample/main.js
-/pxt-sample/pxtapp.js
-/pxt-sample/typescript.js
-/pxt-sample/marked/marked.min.js
-/pxt-sample/highlight.js/highlight.pack.js
-/pxt-sample/jquery.js
-/pxt-sample/pxtlib.js
-/pxt-sample/pxtcompiler.js
-/pxt-sample/pxtblockly.js
-/pxt-sample/pxtwinrt.js
-/pxt-sample/pxteditor.js
-/pxt-sample/pxtsim.js
-/pxt-sample/pxtembed.js
-/pxt-sample/pxtworker.js
-/pxt-sample/pxtweb.js
-/pxt-sample/blockly.css
-/pxt-sample/semantic.css
-/pxt-sample/rtlsemantic.css
+/makecode-ascii-art/semantic.js
+/makecode-ascii-art/main.js
+/makecode-ascii-art/pxtapp.js
+/makecode-ascii-art/typescript.js
+/makecode-ascii-art/marked/marked.min.js
+/makecode-ascii-art/highlight.js/highlight.pack.js
+/makecode-ascii-art/jquery.js
+/makecode-ascii-art/pxtlib.js
+/makecode-ascii-art/pxtcompiler.js
+/makecode-ascii-art/pxtblockly.js
+/makecode-ascii-art/pxtwinrt.js
+/makecode-ascii-art/pxteditor.js
+/makecode-ascii-art/pxtsim.js
+/makecode-ascii-art/pxtembed.js
+/makecode-ascii-art/pxtworker.js
+/makecode-ascii-art/pxtweb.js
+/makecode-ascii-art/blockly.css
+/makecode-ascii-art/semantic.css
+/makecode-ascii-art/rtlsemantic.css
 
 
 
 
 
 # blockly
-/pxt-sample/blockly/media/sprites.png
-/pxt-sample/blockly/media/click.mp3
-/pxt-sample/blockly/media/disconnect.wav
-/pxt-sample/blockly/media/delete.mp3
+/makecode-ascii-art/blockly/media/sprites.png
+/makecode-ascii-art/blockly/media/click.mp3
+/makecode-ascii-art/blockly/media/disconnect.wav
+/makecode-ascii-art/blockly/media/delete.mp3
 
 # monaco; keep in sync with webapp/public/index.html
-/pxt-sample/vs/loader.js
-/pxt-sample/vs/base/worker/workerMain.js
-/pxt-sample/vs/basic-languages/src/bat.js
-/pxt-sample/vs/basic-languages/src/cpp.js
-/pxt-sample/vs/editor/editor.main.css
-/pxt-sample/vs/editor/editor.main.js
-/pxt-sample/vs/editor/editor.main.nls.js
-/pxt-sample/vs/language/json/jsonMode.js
-/pxt-sample/vs/language/json/jsonWorker.js
-/pxt-sample/vs/language/typescript/lib/typescriptServices.js
-/pxt-sample/vs/language/typescript/src/mode.js
-/pxt-sample/vs/language/typescript/src/worker.js
+/makecode-ascii-art/vs/loader.js
+/makecode-ascii-art/vs/base/worker/workerMain.js
+/makecode-ascii-art/vs/basic-languages/src/bat.js
+/makecode-ascii-art/vs/basic-languages/src/cpp.js
+/makecode-ascii-art/vs/editor/editor.main.css
+/makecode-ascii-art/vs/editor/editor.main.js
+/makecode-ascii-art/vs/editor/editor.main.nls.js
+/makecode-ascii-art/vs/language/json/jsonMode.js
+/makecode-ascii-art/vs/language/json/jsonWorker.js
+/makecode-ascii-art/vs/language/typescript/lib/typescriptServices.js
+/makecode-ascii-art/vs/language/typescript/src/mode.js
+/makecode-ascii-art/vs/language/typescript/src/worker.js
 
 # charts
-/pxt-sample/smoothie/smoothie_compressed.js
-/pxt-sample/images/Bars_black.gif
+/makecode-ascii-art/smoothie/smoothie_compressed.js
+/makecode-ascii-art/images/Bars_black.gif
 
 # ai
 https://az416426.vo.msecnd.net/scripts/a/ai.0.js
 
-/pxt-sample/worker.js
-/pxt-sample/monacoworker.js
+/makecode-ascii-art/worker.js
+/makecode-ascii-art/monacoworker.js
 
 # ver Fri May 04 2018 12:16:26 GMT-0500 (CDT)
 
 # target
-/pxt-sample/docs/static/hero.png
+/makecode-ascii-art/docs/static/hero.png
 
-/pxt-sample/target.js
+/makecode-ascii-art/target.js
   
 NETWORK:
 *
