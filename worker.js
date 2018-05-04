@@ -1,6 +1,6 @@
 /// <reference path="../../built/pxtlib.d.ts"/>
 /// <reference path="../../built/pxtcompiler.d.ts"/>
-importScripts("/pxt-sample/pxtworker.js");
+importScripts("/makecode-ascii-art/pxtworker.js");
 var pm = postMessage;
 // work around safari not providing bta
 if (typeof btoa === "undefined") {
