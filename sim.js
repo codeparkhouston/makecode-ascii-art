@@ -73,7 +73,7 @@ var pxsim;
         /**
          * Display message
          */
-        //% block="display the message %text" blockId=displayText
+        //% block="display the text %text" blockId=displayText
         function displayText(text) {
             pxsim.board().displayText(text);
         }
