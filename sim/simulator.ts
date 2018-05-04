@@ -27,6 +27,7 @@ namespace pxsim {
         public canvasElement : any;
         public imageInspectorElement : any;
         public textElement : any;
+        public groupListElement : any;
         public elements: any[];
 
         public p5Image: any;
@@ -47,14 +48,17 @@ namespace pxsim {
             this.canvasElement = document.getElementById('canvas');
             this.imageInspectorElement = document.getElementById('image-inspector');
             this.textElement = document.getElementById('text');
+            this.groupListElement = document.getElementById('group-list');
 
             this.elements = [
                 this.canvasElement,
                 this.imageInspectorElement,
                 this.textElement,
+                this.groupListElement,
             ];
 
             this.hidePixelInspector();
+            this.hideGroupList();
             this.initListeners();
         }
 
@@ -72,6 +76,8 @@ namespace pxsim {
             let board = this;
 
             board.canvasElement.innerHTML = ''; // clear canvas
+            board.imageInspectorElement.innerHTML = ''; // clear canvas
+            board.textElement.innerHTML = ''; // clear canvas
             document.body.innerHTML = ''; // clear children
 
             board.elements.forEach((element) => {
@@ -257,6 +263,11 @@ namespace pxsim {
             }
         }
 
+        getASCIIGroup():string[] {
+            let board = this;
+            return board.asciiGroup;
+        }
+
         pixelsToASCII(pixels: number[][]):string {
             let board = this;
             let chars = _.map(board.chunkedPixels, function(pixel: number[]){
@@ -320,6 +331,16 @@ namespace pxsim {
             let board = this;
             board.showPixelInspector = false;
             board.imageInspectorElement.className = 'hidden';
+        }
+
+        displayGroupList() {
+            let board = this;
+            board.groupListElement.className = '';
+        }
+
+        hideGroupList() {
+            let board = this;
+            board.groupListElement.className = 'hidden';
         }
 
         updateView() {

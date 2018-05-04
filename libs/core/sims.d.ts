@@ -34,6 +34,10 @@ declare namespace image {
     //% shim=image::setASCIIGroup
     function setASCIIGroup(asciiGroup: ASCIIGroups): void;
 
+    //% blockId="getASCIIGroup" block="the ASCII group"
+    //% shim=image::getASCIIGroup
+    function getASCIIGroup(): string[];
+
     //% blockId="pixelsToASCII" block="an ASCII character for each pixel in %list"
     //% shim=image::pixelsToASCII
     function pixelsToASCII(list: number[][]): string;
@@ -61,6 +65,14 @@ declare namespace display {
     //% block="hide pixel inspector" blockId=hidePixelInspector
     //% shim=display::hidePixelInspector
     function hidePixelInspector(): void;
+
+    //% block="display ASCII group list" blockId=displayGroupList
+    //% shim=display::displayGroupList
+    function displayGroupList(): void;
+
+    //% block="hide ASCII group list" blockId=hideGroupList
+    //% shim=display::hideGroupList
+    function hideGroupList(): void;
 
 }
 declare namespace loops {

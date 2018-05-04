@@ -40,6 +40,11 @@ namespace pxsim.image {
         board().setASCIIGroup(asciiGroup);
     }
 
+    //% blockId="getASCIIGroup" block="the ASCII group"
+    export function getASCIIGroup() {
+        return board().getASCIIGroup();
+    }
+
     //% blockId="pixelsToASCII" block="an ASCII character for each pixel in %list"
     export function pixelsToASCII(list:number[][]) {
         return board().pixelsToASCII(list);
@@ -70,6 +75,16 @@ namespace pxsim.display {
     //% block="hide pixel inspector" blockId=hidePixelInspector
     export function hidePixelInspector() {
         board().hidePixelInspector();
+    }
+
+    //% block="display ASCII group list" blockId=displayGroupList
+    export function displayGroupList() {
+        board().displayGroupList();
+    }
+
+    //% block="hide ASCII group list" blockId=hideGroupList
+    export function hideGroupList() {
+        board().hideGroupList();
     }
 
 }

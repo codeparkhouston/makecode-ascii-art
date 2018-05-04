@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>sample simulator</title>
+    <title>Make your own ASCII Art</title>
     <link rel="stylesheet" type="text/css" href="/sim/sim.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 
@@ -11,6 +11,14 @@
         body {
             background: transparent;
             overflow: hidden;
+        }
+        #canvas,
+        #image-inspector {
+            display: inline-block;
+            float: left;
+        }
+        #text {
+            clear: both;
         }
         #pixel-preview--color-box {
             min-width: 40px;
@@ -26,6 +34,9 @@
             margin-top: 4px;
             margin-bottom: 4px;
         }
+        #group-list {
+            overflow: auto;
+        }
         #text {
             overflow: auto;
             max-height: 200px;
@@ -33,6 +44,9 @@
         }
         .hidden {
             visibility: none;
+        }
+        #group-list.hidden {
+            display: none;
         }
         .rgba-label--fixed-width > span {
             min-width: 30px;
@@ -91,4 +105,11 @@
         <div id='pixel-preview--text'></div>
     </div>
     <div id='text'></div>
+    <div id='group-list'>
+        <pre>ascii-one [ '..', '%%', '@@', '??', 'SS', '++', '..', '**', '::', ',,', '..']</pre>
+        <pre>ascii-two [ '##', '??', '%%', '..', 'SS', '++', '..', '**', '::', '..', '  ']</pre>
+        <pre>ascii-three [ '##', '??', '%%', '..', 'SS', '++', '..', '**', '::', ',,', '..']</pre>
+        <pre>ascii-four ["$$","@@","BB","%%","88","&&","WW","MM","##","**","oo","aa","hh","kk","bb","dd","pp","qq","ww","mm""ZZ","OO","00","QQ","LL","CC","JJ","UU","YY","XX","zz","cc","vv","uu","nn","xx","rr","jj","ff","tt","//","\\","||","((","))","11","{{","}}","[[","]]","??","--","__","++","~~","<<",">>","ii","!!","ll","II",";;","::",",,",'""',"^^","``","''","..","  "]</pre>
+        <pre>ascii-five [ '##', 'vv', 'tt', "{{", '??', '++', '::', '~~', '**', '..', '  ']</pre>
+    </div>
 </body>
