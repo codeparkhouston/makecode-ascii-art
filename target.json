@@ -23,19 +23,19 @@
     "autoRun": true
   },
   "appTheme": {
-    "logoUrl": "/makecode-ascii-art/",
-    "homeUrl": "/makecode-ascii-art/",
+    "logoUrl": "/pxt-sample/",
+    "homeUrl": "/pxt-sample/",
     "privacyUrl": "https://go.microsoft.com/fwlink/?LinkId=521839",
     "termsOfUseUrl": "https://go.microsoft.com/fwlink/?LinkID=206977",
     "betaUrl": "https://makecode.com/",
     "docMenu": [
       {
         "name": "About",
-        "path": "/makecode-ascii-art/docs/about"
+        "path": "/pxt-sample/docs/about"
       },
       {
         "name": "Docs",
-        "path": "/makecode-ascii-art/docs/docs"
+        "path": "/pxt-sample/docs/docs"
       }
     ],
     "coloredToolbox": false,

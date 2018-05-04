@@ -203,7 +203,6 @@ var pxsim;
         Board.prototype.initAsync = function (msg) {
             var board = this;
             board.canvasElement.innerHTML = ''; // clear canvas
-            board.imageInspectorElement.innerHTML = ''; // clear canvas
             board.textElement.innerHTML = ''; // clear canvas
             document.body.innerHTML = ''; // clear children
             board.elements.forEach(function (element) {

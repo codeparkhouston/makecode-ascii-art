@@ -3,37 +3,37 @@
 
     // This line gets patched up by the cloud
     var pxtConfig = {
-    "relprefix": "/makecode-ascii-art/",
-    "workerjs": "/makecode-ascii-art/worker.js",
-    "monacoworkerjs": "/makecode-ascii-art/monacoworker.js",
+    "relprefix": "/pxt-sample/",
+    "workerjs": "/pxt-sample/worker.js",
+    "monacoworkerjs": "/pxt-sample/monacoworker.js",
     "pxtVersion": "3.12.17",
     "pxtRelId": "",
-    "pxtCdnUrl": "/makecode-ascii-art/",
-    "commitCdnUrl": "/makecode-ascii-art/",
-    "blobCdnUrl": "/makecode-ascii-art/",
-    "cdnUrl": "/makecode-ascii-art/",
+    "pxtCdnUrl": "/pxt-sample/",
+    "commitCdnUrl": "/pxt-sample/",
+    "blobCdnUrl": "/pxt-sample/",
+    "cdnUrl": "/pxt-sample/",
     "targetVersion": "0.0.0",
     "targetRelId": "",
     "targetUrl": "",
     "targetId": "ASCII Art",
-    "simUrl": "/makecode-ascii-art/simulator.html",
-    "partsUrl": "/makecode-ascii-art/siminstructions.html",
-    "runUrl": "/makecode-ascii-art/run.html",
-    "docsUrl": "/makecode-ascii-art/docs.html",
+    "simUrl": "/pxt-sample/simulator.html",
+    "partsUrl": "/pxt-sample/siminstructions.html",
+    "runUrl": "/pxt-sample/run.html",
+    "docsUrl": "/pxt-sample/docs.html",
     "isStatic": true
 };
 
     var scripts = [
-        "/makecode-ascii-art/highlight.js/highlight.pack.js",
-        "/makecode-ascii-art/bluebird.min.js",
-        "/makecode-ascii-art/semantic.js",
-        "/makecode-ascii-art/marked/marked.min.js",
-        "/makecode-ascii-art/target.js",
-        "/makecode-ascii-art/pxtembed.js"
+        "/pxt-sample/highlight.js/highlight.pack.js",
+        "/pxt-sample/bluebird.min.js",
+        "/pxt-sample/semantic.js",
+        "/pxt-sample/marked/marked.min.js",
+        "/pxt-sample/target.js",
+        "/pxt-sample/pxtembed.js"
     ]
 
     if (typeof jQuery == "undefined")
-        scripts.unshift("/makecode-ascii-art/jquery.js")
+        scripts.unshift("/pxt-sample/jquery.js")
 
     var pxtCallbacks = []
 

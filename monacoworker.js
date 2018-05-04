@@ -1,5 +1,5 @@
 // see https://github.com/Microsoft/monaco-editor
 self.MonacoEnvironment = { 
-    baseUrl: "/makecode-ascii-art/" 
+    baseUrl: "/pxt-sample/" 
 };
-importScripts("/makecode-ascii-art/vs/base/worker/workerMain.js");
+importScripts("/pxt-sample/vs/base/worker/workerMain.js");
