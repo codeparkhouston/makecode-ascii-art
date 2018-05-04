@@ -1,0 +1,10 @@
+CACHE MANIFEST
+
+CACHE:
+/pxt-sample/bluebird.min.js
+/pxt-sample/pxtsim.js
+/pxt-sample/sim.js
+/pxt-sample/sim.css
+
+NETWORK:
+*

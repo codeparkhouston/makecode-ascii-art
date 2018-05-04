@@ -1,0 +1,11 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "name": "ASCII Art",
+  "short_name": "ASCII Art",
+  "icons": [],
+  "scope": "/",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "landscape"
+}
